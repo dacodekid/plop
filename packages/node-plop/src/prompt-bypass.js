@@ -148,11 +148,11 @@ export default async function (prompts, bypassArr, plop) {
     // if this prompt is dynamic, throw error because we can't know if
     // the pompt bypass values given line up with the path this user
     // has taken through the prompt tree.
-    if (typeof p.when === "function") {
-      bypassFailures.push(`You can not bypass conditional prompts: ${p.name}`);
-      bypassedPromptValues.push(false);
-      continue;
-    }
+    // if (typeof p.when === "function") {
+    //   bypassFailures.push(`You can not bypass conditional prompts: ${p.name}`);
+    //   bypassedPromptValues.push(false);
+    //   continue;
+    // }
 
     try {
       const inqPrompt = inqPrompts[p.type] || {};
